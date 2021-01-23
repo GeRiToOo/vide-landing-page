@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    transition: all 0.8s ease;
+}
+
+header.active {
+    right: 300px;
+}
+
+nav .logo {
+    position: absolute;
+    left: 30px;
+    top: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    display: block;
+    position: absolute;
+    right: -600px;
+    opacity: 1;
+    transition: 0.4s ease 0.3s;
+}
+
+.menu.open {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    width: 220px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    list-style: none;
+    transition: 0.4s ease 0.3s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.6em;
+    color: #111;
+}
+
+nav ul li a:hover {
+    color: #03a9f4;
+}
+
+.burger {
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    width: 30px;
+    height: 30px;
+    background: url('../images/bars.svg');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.burger.active {
+    background: url('../images/close.svg');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+
+.showcase {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    z-index: -2;
+    transition: all 0.8s ease;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.text {
+    position: relative;
+    z-index: 3;
+}
+
+.text h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text p {
+    margin: 1em 0;
+    padding: 0;
+    font-size: 1.1em;
+    max-width: 700px;
+}
+
+.text a {
+    display: inline-block;
+    font-size: 1em;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+
+.text a:hover {
+    letter-spacing: 6px;
+}
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 150px;
+}
+
+.social li a {
+    display: inline-block;
+    font-size: 2em;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.social li a:hover {
+    transform: translateY(-20px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #78c9ee;
+    mix-blend-mode: overlay;
+}
+
+
+@media (max-width: 798px) {
+    .showcase {
+        padding: 40px;
+    }
+
+    .text h1 {
+        font-size: 3em;
+    }
+
+    .text h2 {
+        font-size: 2em;
+    }
+}
